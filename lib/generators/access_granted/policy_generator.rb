@@ -1,6 +1,7 @@
 require 'rails/generators/base'
 
-module Accessgranted
+module AccessGranted
+  module Rails
   module Generators
     class PolicyGenerator < Rails::Generators::Base
       source_root File.expand_path("../../templates", __FILE__)
@@ -12,5 +13,6 @@ module Accessgranted
         template "access_policy.rb", "app/policies/access_policy.rb"
       end
     end
+  end
   end
 end
